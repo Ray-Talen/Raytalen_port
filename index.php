@@ -38,6 +38,22 @@
 
 	</head>
 	<body>
+
+		<?php
+			if(isset($_GET['Successful'])){
+				?>
+					<script>
+						alert('Message Successful Sent.')
+					</script>
+				<?php
+			} else {}
+		?>
+		<?php
+			if(isset($_GET['Failed'])){
+					echo "<script>alert('Unsuccessful Error!!')</script>";
+			} else {}
+	    ?>
+
 	<div id="colorlib-page">
 		<div class="container-wrap">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
@@ -181,7 +197,7 @@
 								<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 									<div class="hire">
 										<h2>I am happy to know you <br>that some many projects done sucessfully!</h2>
-										<a href="#" class="btn-hire">Hire me</a>
+										<a href="https://wa.me/2349026739222" class="btn-hire">Hire me</a>
 									</div>
 								</div>
 							</div>
@@ -634,21 +650,21 @@
 						<div class="col-md-7 col-md-push-1">
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
-									<form action="">
+									<form action="home control.php" method="post">
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name">
+											<input type="text" class="form-control" name="name" placeholder="Name" required>
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Email">
+											<input type="text" class="form-control" name="email" placeholder="Email" required>
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Subject">
+											<input type="text" class="form-control" name="subject" placeholder="Subject" required>
 										</div>
 										<div class="form-group">
-											<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+											<textarea id="message" cols="30" name="message" rows="7" class="form-control" placeholder="Message"></textarea>
 										</div>
 										<div class="form-group">
-											<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
+											<input type="submit" name="submit" class="btn btn-primary btn-send-message" value="Send Message">
 										</div>
 									</form>
 								</div>
